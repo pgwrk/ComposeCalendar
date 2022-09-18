@@ -7,7 +7,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import ru.mts.pgolovko.composecalendar.ui.theme.ComposeCalendarTheme
+import ru.mts.pgolovko.composecalendar.ui.theme.AppTheme
 
 @Composable
 fun ScheduleScreen(onBack: ()->Unit) {
@@ -21,6 +21,6 @@ fun ScheduleScreen(onBack: ()->Unit) {
 
 @Preview
 @Composable
-private fun ScheduleScreenPreview() = ComposeCalendarTheme {
+private fun ScheduleScreenPreview() = AppTheme {
     ScheduleScreen { }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ComposeCalendar</string>
+    <string name="show_schedule">Show schedule</string>
 </resources>

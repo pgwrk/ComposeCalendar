@@ -1,44 +1,48 @@
 package ru.mts.pgolovko.composecalendar.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
-import androidx.compose.material.lightColors
+import androidx.compose.material.Shapes
 import androidx.compose.runtime.Composable
-
-private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200
-)
-
-private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
-
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
-)
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 
 @Composable
-fun ComposeCalendarTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun AppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        dsDarkColors
     } else {
-        LightColorPalette
+        dsLightColors
     }
 
-    MaterialTheme(
-        colors = colors,
-        typography = Typography,
-        shapes = Shapes,
+    CompositionLocalProvider(
+        LocalAppColors provides colors,
+        LocalAppTypography provides dsTypography,
+        LocalAppShape provides dsShapes,
         content = content
     )
+}
+
+val LocalAppColors = staticCompositionLocalOf<DesignSystemColors> {
+    error("No colors provided")
+}
+val LocalAppTypography = staticCompositionLocalOf<DesignSystemTypography> {
+    error("No typography provided")
+}
+
+val LocalAppShape = staticCompositionLocalOf<Shapes> {
+    error("No shapes provided")
+}
+
+object AppTheme {
+    val colors: DesignSystemColors
+        @Composable
+        get() = LocalAppColors.current
+
+    val typography: DesignSystemTypography
+        @Composable
+        get() = LocalAppTypography.current
+
+    val shapes: Shapes
+        @Composable
+        get() = LocalAppShape.current
 }
