@@ -27,7 +27,7 @@ fun ScheduleScreen(day: String) {
         val state = remember { SCHEDULE_ITEMS }
 
         Text(
-            text = stringResource(id = R.string.schedule_header) + " " + day,
+            text = stringResource(id = R.string.schedule_header),
             style = AppTheme.typography.h3Medium,
             color = AppTheme.colors.textHeadline
         )
@@ -74,6 +74,6 @@ private fun ScheduleScreenPreview() = AppTheme {
 private val SCHEDULE_ITEMS = listOf(
     "00:00 Sleep", "01:00 Sleep","02:00 Sleep", "03:00 Sleep","04:00 Sleep", "05:00 Sleep","06:00 Sleep", "07:00 Sleep",
     "08:00 Wakeup", "09:00 Gymnastics","10:00 Breakfast", "11:00 Work","12:00 Work", "13:00 Work","14:00 Sleep", "15:00 Work",
-    "16:00 Lunch", "17:00 Work","18:00 Work", "19:00 Work","20:00 Work", "21:00 Walking","22:00 ", "23:00 Dinner",
+    "16:00 Lunch", "17:00 Work","18:00 Work", "19:00 Work","20:00 Work", "21:00 Walking","22:00 Free time", "23:00 Dinner",
     "24:00 Gaming"
 )
