@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     }
 
                     composable(Destinations.Schedule) {
-                        ScheduleScreen { navController.popBackStack() }
+                        ScheduleScreen("21th of September")
                     }
                 }
             }

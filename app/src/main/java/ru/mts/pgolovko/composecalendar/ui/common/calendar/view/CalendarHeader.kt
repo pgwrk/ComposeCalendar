@@ -36,10 +36,10 @@ fun CalendarHeader(
 
             Column(modifier = Modifier.align(Alignment.CenterVertically)) {
                 Icon(
-                        painter = painterResource(id = R.drawable.ic_drop_up),
-                        tint = AppTheme.colors.icon,
-                        contentDescription = ""
-                    )
+                    painter = painterResource(id = R.drawable.ic_drop_up),
+                    tint = AppTheme.colors.icon,
+                    contentDescription = ""
+                )
 
                 Icon(
                     painter = painterResource(id = R.drawable.ic_drop_down),
@@ -49,7 +49,7 @@ fun CalendarHeader(
             }
         }
 
-        Row() {
+        Row {
             IconButton(
                 modifier = Modifier
                     .background(color = AppTheme.colors.backgroundSecondary, shape = CircleShape)

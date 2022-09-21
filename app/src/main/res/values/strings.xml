@@ -9,4 +9,6 @@
     <string name="friday">Fri</string>
     <string name="saturday">Sat</string>
     <string name="sunday">Sun</string>
+
+    <string name="schedule_header">Plans for</string>
 </resources>

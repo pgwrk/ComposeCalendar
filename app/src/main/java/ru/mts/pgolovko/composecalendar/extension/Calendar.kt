@@ -8,4 +8,9 @@ fun Calendar.asString(): String {
     return format.format(time)
 }
 
+fun Calendar.asDayOfMonthString(): String {
+    val format = SimpleDateFormat("dd MMMM")
+    return format.format(time)
+}
+
 fun Calendar.getDayAsString(): String = get(Calendar.DATE).toString()
